@@ -11,9 +11,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>One Sound - Login</title>
-
-
+    <title>One Sound - SignUp</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -101,7 +99,7 @@
                                 <div class="login-register-cart-button d-flex align-items-center">
                                     <!-- Login/Register -->
                                     <div class="login-register-btn mr-50">
-                                        <a href="Signup - redirect.html" id="loginBtn">Sign Up</a>
+                                        <a href="login.html" id="loginBtn">Login</a>
                                     </div>
 
                                     <!-- Cart Button -->
@@ -121,10 +119,10 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
             <p>See what’s new</p>
-            <h2>Login</h2>
+            <h2>Sign UP</h2>
         </div>
     </section>
     <!-- ##### Breadcumb Area End ##### -->
@@ -135,19 +133,47 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
                     <div class="login-content">
-                        <h3>Welcome Back</h3>
-                        <!-- Login Form -->
+                        <h3>Welcome to the ONE SOUND....</h3>
+                        <!-- SignUp Form -->
                         <div class="login-form">
-                            <form action="login" method="post">
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ex : Dasuni" name = "firstname">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="firstname">Last Name</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ex : Premasinghe" name = "lastname">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter E-mail" name = "email">
+                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                                </div>
                                 <div class="form-group">
                                     <label for="firstname">Username</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Username" name = "uid">
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" name = "uid">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name = "pass">
                                 </div>
-                                <button type="submit" class="btn oneMusic-btn mt-30" name = "login" >Login</button>
+                                <!--  <div class="form-group">
+                                    <label for="exampleInputPassword1">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-enter Password">
+                                </div> -->
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                      <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                                      <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                                      <div class="invalid-feedback">You must agree before submitting.</div>
+                                    </div>
+                                  </div>
+
+                                <button type="submit" class="btn oneMusic-btn mt-30" name ="submit">Sign Up</button>
                             </form>
                         </div>
                     </div>
@@ -196,10 +222,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active js -->
     <script src="js/active.js"></script>
 </body>
-<!-- edited  -->
-<!-- comment -->
-
-
-
 
 </html>
