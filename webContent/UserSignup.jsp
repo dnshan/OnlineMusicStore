@@ -98,9 +98,9 @@
                                 <!-- Login/Register & Cart Button -->
                                 <div class="login-register-cart-button d-flex align-items-center">
                                     <!-- Login/Register -->
-                                    <div class="login-register-btn mr-50">
+                                    <!--  <div class="login-register-btn mr-50">
                                         <a href="login.html" id="loginBtn">Login</a>
-                                    </div>
+                                    </div>-->
 
                                     <!-- Cart Button -->
                                     <!-- <div class="cart-btn">
