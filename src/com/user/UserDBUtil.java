@@ -62,20 +62,12 @@ public class UserDBUtil {
 	public static boolean insertUser(String firstname, String lastname, String email, String username, String password) {
 		
 		boolean isSuccess = false;
-		
-		
-		//Create Database Connection
-		
-		String url = "jdbc:mysql://localhost:3306/onlinemusicstore";
-		String userDB = "root";
-		String passwordDB = "Dxsuni2003@#";
-		
+			
 		try {
 			
-			Class.forName("com.mysql.jdbc.Driver");
 			
-			Connection con = DriverManager.getConnection(url, userDB, passwordDB);
-			Statement stmt = con.createStatement();
+			con = DBConnection.getConnection();
+			stmt = con.createStatement();
 			String sql = "INSERT INTO user VALUES (0, '"+firstname+"', '"+lastname+"', '"+email+"', '"+username+"', '"+password+"') ";
 			int result = stmt.executeUpdate(sql);
 			

@@ -14,7 +14,7 @@ public class DBConnection {
 		
 		try {
 			
-			Class.forName("con.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			
 			con = DriverManager.getConnection(url, username, passwordDB);
 			
