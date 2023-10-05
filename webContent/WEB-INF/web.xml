@@ -18,7 +18,7 @@
 	
 	 <servlet>
 		<servlet-name>userSignUp</servlet-name>
-		<servlet-class>com.user.userSignUp</servlet-class>
+		<servlet-class>com.user.userSignUpServlet</servlet-class>
 	</servlet>
     
     <servlet-mapping>

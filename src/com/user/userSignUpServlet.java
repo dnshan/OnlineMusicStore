@@ -1,3 +1,4 @@
+
 package com.user;
 
 import java.io.IOException;
@@ -11,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/userSignUp")
-public class userSignUp extends HttpServlet {
+public class userSignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     
-    public userSignUp() {
+    public userSignUpServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -50,3 +51,4 @@ public class userSignUp extends HttpServlet {
 	}
 
 }
+
