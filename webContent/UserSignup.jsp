@@ -22,6 +22,7 @@
 </head>
 
 <body>
+
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="lds-ellipsis">
@@ -98,9 +99,9 @@
                                 <!-- Login/Register & Cart Button -->
                                 <div class="login-register-cart-button d-flex align-items-center">
                                     <!-- Login/Register -->
-                                    <div class="login-register-btn mr-50">
+                                    <!--  <div class="login-register-btn mr-50">
                                         <a href="login.html" id="loginBtn">Login</a>
-                                    </div>
+                                    </div>-->
 
                                     <!-- Cart Button -->
                                     <!-- <div class="cart-btn">
@@ -136,7 +137,7 @@
                         <h3>Welcome to the ONE SOUND....</h3>
                         <!-- SignUp Form -->
                         <div class="login-form">
-                            <form action="#" method="post">
+                            <form action="SignUp" method="post">
                                 <div class="form-group">
                                     <label for="firstname">First Name</label>
                                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ex : Dasuni" name = "firstname">

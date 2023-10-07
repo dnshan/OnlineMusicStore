@@ -10,26 +10,26 @@ import java.util.ArrayList;
 
 public class UserDBUtil {
 	
+	private static Connection con = null;
+	private static Statement stmt = null;
+	private static ResultSet result = null;
+	
+	
+	
 	public static List<User> validate(String username, String password){
 	
 	ArrayList<User> user = new ArrayList<>();
 	
-	//create database connection
 	
-	String url = "jdbc:mysql://localhost:3306/onlinemusicstore";
-	String userDB = "root";
-	String passwordDB = "Dxsuni2003@#";
 	
 	
 	//validate
 	try {
 		
-		Class.forName("com.mysql.jdbc.Driver");
-		
-		Connection con = DriverManager.getConnection(url, userDB, passwordDB);
-		Statement stmt = con.createStatement();
+		con = DBConnection.getConnection();
+		stmt = con.createStatement();
 		String sql = "SELECT * FROM user WHERE Username = '"+username+"' AND Password = '"+password+"'";
-		ResultSet result = stmt.executeQuery(sql);
+		result = stmt.executeQuery(sql);
 		
 		if(result.next()) {
 			
@@ -39,7 +39,7 @@ public class UserDBUtil {
 			String email = result.getString(4);
 			String usernameU = result.getString(5);
 			String passwordU = result.getString(6);
-			
+			//String userRole = result.getString(7);
 			
 			User u = new User(id, firstname, lastname, email, usernameU, passwordU);
 			
@@ -57,8 +57,44 @@ public class UserDBUtil {
 	}
 	
 	return user;
-	
-	
-
 }
+	
+	public static boolean insertUser(String firstname, String lastname, String email, String username, String password) {
+		
+		boolean isSuccess = false;
+			
+		try {
+			
+			
+			con = DBConnection.getConnection();
+			stmt = con.createStatement();
+			String sql = "INSERT INTO user VALUES (0, '"+firstname+"', '"+lastname+"', '"+email+"', '"+username+"', '"+password+"') ";
+			int result = stmt.executeUpdate(sql);
+			
+			
+			if(result > 0) {
+				
+				isSuccess = true;	
+			}
+			
+			else {
+				isSuccess = false;
+				
+			}
+			
+			
+			
+		}
+		
+		catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		return isSuccess;
+		
+		
+	}
+	
+	
 }

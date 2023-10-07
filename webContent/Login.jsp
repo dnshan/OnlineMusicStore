@@ -101,7 +101,7 @@
                                 <div class="login-register-cart-button d-flex align-items-center">
                                     <!-- Login/Register -->
                                     <div class="login-register-btn mr-50">
-                                        <a href="Signup - redirect.html" id="loginBtn">Sign Up</a>
+                                        <a href="UserSignup.jsp" id="loginBtn">Sign Up</a>
                                     </div>
 
                                     <!-- Cart Button -->
@@ -138,7 +138,7 @@
                         <h3>Welcome Back</h3>
                         <!-- Login Form -->
                         <div class="login-form">
-                            <form action="login" method="post">
+                            <form action="log" method="post">
                                 <div class="form-group">
                                     <label for="firstname">Username</label>
                                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Username" name = "uid">

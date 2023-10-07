@@ -1,6 +1,9 @@
+
 package com.user;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/userSignUp")
-public class userSignUp extends HttpServlet {
+public class userSignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     
-    public userSignUp() {
+    public userSignUpServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,6 +29,26 @@ public class userSignUp extends HttpServlet {
 		String username = request.getParameter("uid");
 		String password = request.getParameter("pass");
 		
+		boolean isTrue;
+		
+		isTrue = UserDBUtil.insertUser(FirstName, LastName, email, username, password);
+		
+		if(isTrue == true) {
+			
+			RequestDispatcher dis = request.getRequestDispatcher("Login.jsp");
+			
+			dis.forward(request, response);
+			
+		}
+		
+		else {
+			RequestDispatcher dis2 = request.getRequestDispatcher("UserSignup.jsp");
+			dis2.forward(request, response);
+			
+		}
+		
+		
 	}
 
 }
+
